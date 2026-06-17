@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <!-- Enforce HTTPS for sensitive domains -->
+        <domain includeSubdomains="true">google.com</domain>
+        <domain includeSubdomains="true">facebook.com</domain>
+        <domain includeSubdomains="true">twitter.com</domain>
+        <domain includeSubdomains="true">amazon.com</domain>
+        <domain includeSubdomains="true">apple.com</domain>
+        <domain includeSubdomains="true">microsoft.com</domain>
+        <domain includeSubdomains="true">github.com</domain>
+        <domain includeSubdomains="true">stackoverflow.com</domain>
+    </domain-config>
+</network-security-config>
